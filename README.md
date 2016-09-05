@@ -1,5 +1,15 @@
 Prezto — Instantly Awesome Zsh
 ==============================
+DISCLAIMER
+-----------
+
+This is a fork of the original project which mostly contains changes for personal use.
+You most likely want to get the fresh experience by looking at the [original project][9] from sorin-ionescu
+and fork it yourself, if you make changes to it. Currently the changes are minimal but its still highly advised
+that you look at the original project.
+
+About
+-----
 
 Prezto is the configuration framework for [Zsh][1]; it enriches the command line
 interface environment with sane defaults, aliases, functions, auto completion,
@@ -115,3 +125,4 @@ SOFTWARE.
 [6]: http://gitref.org
 [7]: http://www.bash2zsh.com/zsh_refcard/refcard.pdf
 [8]: http://grml.org/zsh/zsh-lovers.html
+[9]: https://github.com/sorin-ionescu/zprezto
