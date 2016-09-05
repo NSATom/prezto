@@ -25,6 +25,7 @@ zstyle ':prezto:*:*' color 'yes'
 # The order matters.
 zstyle ':prezto:load' pmodule \
   'environment' \
+  'common-variables' \
   'terminal' \
   'editor' \
   'history' \
@@ -44,6 +45,16 @@ zstyle ':prezto:load' pmodule \
 # zstyle ':prezto:module:autosuggestions:color' found ''
 
 #
+# Common-variables
+#
+
+# Set Editor variable
+zstyle ':prezto:module:common-variables' editor 'vi'
+
+# Set Visual variable
+zstyle ':prezto:module:common-variables' visual 'vi'
+
+#
 # Editor
 #
 
@@ -58,14 +69,7 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 #
 
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
-zstyle ':prezto:module:git:status:ignore' submodules 'dirty'
-
-#
-# GNU Utility
-#
-
-# Set the command prefix on non-GNU systems.
-# zstyle ':prezto:module:gnu-utility' prefix 'g'
+zstyle ':prezto:module:git:status:ignore' submodules 'none'
 
 #
 # History Substring Search
@@ -81,20 +85,13 @@ zstyle ':prezto:module:git:status:ignore' submodules 'dirty'
 # zstyle ':prezto:module:history-substring-search' globbing-flags ''
 
 #
-# Pacman
-#
-
-# Set the Pacman frontend.
-# zstyle ':prezto:module:pacman' frontend 'yaourt'
-
-#
 # Prompt
 #
 
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'powerlevel9k'
+zstyle ':prezto:module:prompt' theme 'gentoo'
 
 #
 # Ruby
@@ -144,7 +141,7 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 #
 
 # Auto set the tab and window titles.
-# zstyle ':prezto:module:terminal' auto-title 'yes'
+zstyle ':prezto:module:terminal' auto-title 'yes'
 
 # Set the window title format.
 # zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
@@ -157,7 +154,7 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 #
 
 # Auto start a session when Zsh is launched in a local terminal.
-# zstyle ':prezto:module:tmux:auto-start' local 'yes'
+#zstyle ':prezto:module:tmux:auto-start' local 'yes'
 
 # Auto start a session when Zsh is launched in a SSH connection.
 # zstyle ':prezto:module:tmux:auto-start' remote 'yes'
