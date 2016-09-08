@@ -5,19 +5,11 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-# Powerlevel9K customizations
+# source Powerlevel9K customizations
 # Mode needs to load before prezto loads
-POWERLEVEL9K_MODE='awesome-patched'
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=4
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs vi_mode)
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_SHOW_CHANGESET=true
-POWERLEVEL9K_STATUS_VERBOSE=false
-POWERLEVEL9K_INSERT_MODE_STRING=""
-POWERLEVEL9K_COMMAND_MODE_STRING="COMMAND-MODE"
-export DEFAULT_USER="$USER"
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/pwrlvl9kconf.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/pwrlvl9kconf.zsh"
+fi
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
