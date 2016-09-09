@@ -7,9 +7,9 @@
 
 # source Powerlevel9K customizations
 # Mode needs to load before prezto loads
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/pwrlvl9kconf.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/pwrlvl9kconf.zsh"
-fi
+#if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/pwrlvl9kconf.zsh" ]]; then
+#  source "${ZDOTDIR:-$HOME}/.zprezto/pwrlvl9kconf.zsh"
+#fi
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
