@@ -25,7 +25,6 @@ zstyle ':prezto:load' zfunction 'zargs' 'zmv'
 # The order matters.
 zstyle ':prezto:load' pmodule \
   'environment' \
-  'common-variables' \
   'terminal' \
   'editor' \
   'history' \
@@ -43,16 +42,6 @@ zstyle ':prezto:load' pmodule \
 
 # Set the query found color.
 # zstyle ':prezto:module:autosuggestions:color' found ''
-
-#
-# Common-variables
-#
-
-# Set Editor variable
-zstyle ':prezto:module:common-variables' editor '/usr/bin/vi'
-
-# Set Visual variable
-zstyle ':prezto:module:common-variables' visual '/usr/bin/vi'
 
 #
 # Editor
