@@ -11,14 +11,21 @@
 
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
+elif (( $+command[xdg-open] )); then
+  export BROWSER='xdg-open'
 fi
 
 #
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+if [[ $UID == 0 || $EUID == 0 ]]; then
+  export EDITOR='vim'
+  export VISUAL='vim'
+else
+  export EDITOR='nvim'
+  export VISUAL='nvim'
+fi
 export PAGER='less'
 
 #
