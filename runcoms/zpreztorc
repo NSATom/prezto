@@ -34,6 +34,8 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'completion' \
   'syntax-highlighting' \
+  'history-substring-search' \
+  'autosuggestions' \
   'prompt'
 
 #
@@ -117,7 +119,7 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
   'brackets' \
   'pattern' \
   'cursor' \
-  'line' 
+  'line'
 
 # Set syntax highlighting styles.
 # zstyle ':prezto:module:syntax-highlighting' styles \
