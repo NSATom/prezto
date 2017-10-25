@@ -46,9 +46,6 @@ alias scp='noglob noremoteglob scp'
 alias sftp='noglob sftp'
 
 # Define general aliases.
-alias asdf='setxkbmap de neo -option'
-#alias uiae='setxkbmap us -option'
-alias uiae='setxkbmap -layout us,us,de -variant ,dvorak,qwerty -option grp:sclk_toggle,caps:escape,shift:both_capslock_cancel'
 alias _='sudo'
 alias b='${(z)BROWSER}'
 
@@ -58,12 +55,8 @@ alias mkdir="${aliases[mkdir]:-mkdir} -p"
 alias p='${(z)PAGER}'
 alias po='popd'
 alias pu='pushd'
-<<<<<<< HEAD
-#alias rm="${aliases[rm]:-rm} -i"
 alias rmi="${aliases[rm]:-rm} -i"
-=======
 alias sa='alias | grep -i'
->>>>>>> upstream/master
 alias type='type -a'
 
 # Safe ops. Ask the user before doing anything destructive.

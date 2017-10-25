@@ -87,8 +87,6 @@ zstyle ':prezto:module:git:status:ignore' submodules 'none'
 # zstyle ':prezto:module:history-substring-search' globbing-flags ''
 
 #
-<<<<<<< HEAD
-=======
 # OS X
 #
 
@@ -103,7 +101,6 @@ zstyle ':prezto:module:git:status:ignore' submodules 'none'
 # zstyle ':prezto:module:pacman' frontend 'yaourt'
 
 #
->>>>>>> upstream/master
 # Prompt
 #
 
@@ -169,10 +166,6 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
   'line'
 
 # Set syntax highlighting styles.
-<<<<<<< HEAD
-#zstyle ':prezto:module:syntax-highlighting' styles \
-#  'command' 'fg=blue'
-=======
 # zstyle ':prezto:module:syntax-highlighting' styles \
 #   'builtin' 'bg=blue' \
 #   'command' 'bg=blue' \
@@ -181,7 +174,6 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 # Set syntax pattern styles.
 # zstyle ':prezto:module:syntax-highlighting' pattern \
 #   'rm*-rf*' 'fg=white,bold,bg=red'
->>>>>>> upstream/master
 
 #
 # Terminal
@@ -222,4 +214,4 @@ zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 # Enabled safe options. This aliases cp, ln, mv and rm so that they prompt
 # before deleting or overwriting files. Set to 'no' to disable this safer
 # behavior.
-# zstyle ':prezto:module:utility' safe-ops 'yes'
+zstyle ':prezto:module:utility' safe-ops 'no'
