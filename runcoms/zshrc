@@ -17,7 +17,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-alias vim=nvim
 
 # pkgfile support on unknown-commands
 source /usr/share/doc/pkgfile/command-not-found.zsh
