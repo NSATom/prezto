@@ -46,6 +46,9 @@ alias scp='noglob scp'
 alias sftp='noglob sftp'
 
 # Define general aliases.
+alias asdf='setxkbmap de neo -option'
+#alias uiae='setxkbmap us -option'
+alias uiae='setxkbmap -layout us,us,de -variant ,dvorak,qwerty -option grp:sclk_toggle,caps:escape,shift:both_capslock_cancel'
 alias _='sudo'
 alias b='${(z)BROWSER}'
 alias cp="${aliases[cp]:-cp} -i"
@@ -56,7 +59,8 @@ alias mv="${aliases[mv]:-mv} -i"
 alias p='${(z)PAGER}'
 alias po='popd'
 alias pu='pushd'
-alias rm="${aliases[rm]:-rm} -i"
+#alias rm="${aliases[rm]:-rm} -i"
+alias rmi="${aliases[rm]:-rm} -i"
 alias type='type -a'
 
 # ls

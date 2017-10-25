@@ -29,12 +29,34 @@ fi
 export PAGER='less'
 
 #
+# Terminal
+#
+
+export TERMINAL='st'
+
+#
 # Language
 #
 
 if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
 fi
+
+#
+# XDG
+#
+
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_RUNTIME_DIR=/run/user/1000
+
+
+#
+# Notmuch
+#
+
+export NOTMUCH_CONFIG=$XDG_CONFIG_HOME/notmuch/config
 
 #
 # Paths
@@ -51,6 +73,8 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
+  $HOME/.local/bin/
+  $HOME/.cargo/bin
   $path
 )
 

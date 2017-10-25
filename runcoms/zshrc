@@ -17,3 +17,20 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+alias vim=nvim
+
+# pkgfile support on unknown-commands
+source /usr/share/doc/pkgfile/command-not-found.zsh
+
+# allow for fancy syncmail
+alias syncmail="mbsync -c $XDG_CONFIG_HOME/mbsync/config"
+
+# told you; can't touch this!
+alias canttouchthis='playerctl pause; echo "Canʼt touch this!";\
+  aplay ~/.local/share/hammertime.wav &> /dev/null; sleep 1;\
+  playerctl play;'
+
+# custom umask
+umask 0027
+
+# vim: set et sw=2 tw=2:
