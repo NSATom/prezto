@@ -50,8 +50,8 @@ zstyle ':prezto:load' pmodule \
 #
 
 # Set the entries to ignore in static */etc/hosts* for host completion.
-# zstyle ':prezto:module:completion:*:hosts' etc-host-ignores \
-#   '0.0.0.0' '127.0.0.1'
+zstyle ':prezto:module:completion:*:hosts' etc-host-ignores \
+  '0.0.0.0' '127.0.0.1'
 
 #
 # Editor
@@ -162,7 +162,6 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
   'main' \
   'brackets' \
   'pattern' \
-  'cursor' \
   'line'
 
 # Set syntax highlighting styles.
@@ -197,6 +196,7 @@ zstyle ':prezto:module:terminal:tab-title' format '%l %n@%m: %s'
 
 # Auto start a session when Zsh is launched in a local terminal.
 zstyle ':prezto:module:tmux:auto-start' local 'no'
+zstyle ':prezto:module:tmux:session' name 'default'
 
 # Auto start a session when Zsh is launched in a SSH connection.
 zstyle ':prezto:module:tmux:auto-start' remote 'yes'
