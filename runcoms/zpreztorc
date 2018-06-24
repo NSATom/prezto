@@ -38,7 +38,7 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'tmux' \
   'grc' \
-  'fast-syntax-highlighting' \
+  'syntax-highlighting' \
   'history-substring-search' \
   'prompt'
 
@@ -159,11 +159,11 @@ zstyle ':prezto:module:prompt' theme 'liquidprompt'
 
 # Set syntax highlighters.
 # By default, only the main highlighter is enabled.
-#zstyle ':prezto:module:syntax-highlighting' highlighters \
-#  'main' \
-#  'brackets' \
-#  'pattern' \
-#  'line'
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+  'main' \
+  'brackets' \
+  'pattern' \
+  'line'
 
 # Set syntax highlighting styles.
 # zstyle ':prezto:module:syntax-highlighting' styles \

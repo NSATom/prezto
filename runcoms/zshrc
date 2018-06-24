@@ -4,7 +4,7 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
-
+zmodload zsh/zprof
 # source Powerlevel9K customizations
 # Mode needs to load before prezto loads
 #if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/pwrlvl9kconf.zsh" ]]; then
@@ -32,4 +32,5 @@ export PATH="$PATH:$HOME/.local/bin/"
 export XDG_CONFIG_HOME="$HOME/.config"
 export WEECHAT_HOME="$XDG_CONFIG_HOME/weechat"
 
+zprof | most
 # vim: set et sw=2 tw=2:
