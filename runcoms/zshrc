@@ -28,4 +28,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="$PATH:$HOME/.local/bin/"
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export WEECHAT_HOME="$XDG_CONFIG_HOME/weechat"
+
 # vim: set et sw=2 tw=2:

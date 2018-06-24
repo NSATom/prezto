@@ -46,7 +46,6 @@ alias scp='noglob scp'
 alias sftp='noglob sftp'
 
 # Define general aliases.
-alias _='sudo'
 alias b='${(z)BROWSER}'
 
 alias diffu="diff --unified"
@@ -86,7 +85,7 @@ if is-callable 'dircolors'; then
       fi
     fi
 
-    alias ls="${aliases[ls]:-ls} --color=auto"
+    alias ls="${aliases[ls]:-ls} --color"
   else
     alias ls="${aliases[ls]:-ls} -F"
   fi

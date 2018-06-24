@@ -152,6 +152,11 @@ if [[ -s "$HOME/.mutt/aliases" ]]; then
   zstyle ':completion:*:mutt:*' users ${${${(f)"$(<"$HOME/.mutt/aliases")"}#alias[[:space:]]}%%[[:space:]]*}
 fi
 
+# Sudo (include sbin folders for sudo completion)
+if [[ $EUID != 0 ]] ; then
+ zstyle ':completion:*:sudo::' environ PATH="/sbin/:/usr/sbin/:/usr/local/sbin/:$PATH" HOME="/root"
+fi
+
 # SSH/SCP/RSYNC
 zstyle ':completion:*:(ssh|scp|rsync):*' tag-order 'hosts:-host:host hosts:-domain:domain hosts:-ipaddr:ip\ address *'
 zstyle ':completion:*:(scp|rsync):*' group-order users files all-files hosts-domain hosts-host hosts-ipaddr

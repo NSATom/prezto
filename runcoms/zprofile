@@ -51,6 +51,7 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_RUNTIME_DIR=/run/user/1000
 
+export WEECHAT_HOME=$XDG_CONFIG_HOME/weechat
 
 #
 # Paths
