@@ -4,12 +4,7 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
-zmodload zsh/zprof
-# source Powerlevel9K customizations
-# Mode needs to load before prezto loads
-#if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/pwrlvl9kconf.zsh" ]]; then
-#  source "${ZDOTDIR:-$HOME}/.zprezto/pwrlvl9kconf.zsh"
-#fi
+#zmodload zsh/zprof
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -17,20 +12,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-# custom umask
-#umask 0027
-
-#alias asdf="setxkbmap de neo"
-#alias uiae="setxkbmap us"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 export PATH="$PATH:$HOME/.local/bin/"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export WEECHAT_HOME="$XDG_CONFIG_HOME/weechat"
 
-zprof | most
+#zprof | most
 # vim: set et sw=2 tw=2:
