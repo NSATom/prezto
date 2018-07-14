@@ -68,6 +68,8 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   alias gitcR='git reset "HEAD^"'
   alias gitcs='git show'
   alias gitcl='git-commit-lost'
+  alias gitcy='git cherry -v --abbrev'
+  alias gitcY='git cherry -v'
 
   # Conflict (C)
   alias gitCl='git --no-pager diff --name-only --diff-filter=U'
