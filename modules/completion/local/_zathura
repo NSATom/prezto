@@ -1,0 +1,35 @@
+#compdef zathura
+
+local curcontext="$curcontext" state
+typeset -A opt_args
+
+_arguments -C -S -s \
+  '(-c --config-dir=DIR)'{-c,--config-dir=}'[Path to config directory]:config directory:_files -/' \
+  '(-d --data-dir=DIR)'{-d,--data-dir=}'[Path to data directory]:data directory:_files -/' \
+  '--cache-dir=-[Path to cache directory]:cache directory:_files -/' \
+  '(-p --plugins-dir=DIR)'{-p,--plugins-dir=}'[Path to plugins directory]:plugins directory:_files -/' \
+  '(-e --reparent=XID)'{-e,--reparent=}'[Reparents to window specified by XID (X11)]:xid' \
+  '(-w --password=password)'{-w,--password=}'[Document password]:password' \
+  '(-P --page=page)'{-P,--page=}'[Page number to go to]:page number' \
+  '(-l --log-level=level)'{-l,--log-level=}'[Log level]:level:(error warning info debug)' \
+  '(-x --snyctex-editor-command=cmd)'{-x,--synxtec-editor-command=}'[Synctex editor (forwarded to the synctex command)]:command' \
+  '--synctex-forward=-[Move to given synctex position]:position' \
+  '--synctex-pid=-[Highlight position in given process]:pid' \
+  '--mode=-[Start in a non-default mode]:mode:(presentation fullscreen)' \
+  '--fork[Fork into the background]' \
+  '(-h --help)'{-h,--help}'[Show help message]' \
+  '(-V --version)'{-V,--version}'[Print version information]' \
+  '*:Zathura File:->files' && return 0
+
+local exts
+
+exts="$exts|pdf|epub|oxps"
+exts="$exts|ps|eps|epsi|epsf"
+exts="$exts|djvu|djv"
+exts="$exts|cb7|cbr|cbz|cbt"
+
+case "$state" in
+  files)
+    _files -g "*.($exts)"
+    ;;
+esac
