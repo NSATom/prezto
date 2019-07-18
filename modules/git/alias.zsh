@@ -67,18 +67,19 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   alias gitcr='git revert'
   alias gitcR='git reset "HEAD^"'
   alias gitcs='git show'
+  alias gitcsS='git show --pretty=short --show-signature
   alias gitcl='git-commit-lost'
   alias gitcy='git cherry -v --abbrev'
   alias gitcY='git cherry -v'
 
   # Conflict (C)
   alias gitCl='git --no-pager diff --name-only --diff-filter=U'
-  alias gitCa='git add $(gCl)'
+  alias gitCa='git add $(gitCl)'
   alias gitCe='git mergetool $(gitCl)'
   alias gitCo='git checkout --ours --'
-  alias gitCO='gCo $(gCl)'
+  alias gitCO='gCo $(gitCl)'
   alias gitCt='git checkout --theirs --'
-  alias gitCT='gCt $(gCl)'
+  alias gitCT='gCt $(gitCl)'
 
   # Data (d)
   alias gitd='git ls-files'
@@ -189,6 +190,7 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   alias gitlg='git log --topo-order --all --graph --pretty=format:"${_git_log_oneline_format}"'
   alias gitlb='git log --topo-order --pretty=format:"${_git_log_brief_format}"'
   alias gitlc='git shortlog --summary --numbered'
+  alias gitlS='git log --show-signature'
 
   # Merge (m)
   alias gitm='git merge'
@@ -254,6 +256,8 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   # Tag (t)
   alias gitt='git tag'
   alias gittl='git tag -l'
+  alias gitts='git tag -s'
+  alias gittv='git verify-tag'
 
   # Working Copy (w)
   alias gitws='git status --ignore-submodules=${_git_status_ignore_submodules} --short'
