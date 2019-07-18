@@ -67,7 +67,7 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   alias gitcr='git revert'
   alias gitcR='git reset "HEAD^"'
   alias gitcs='git show'
-  alias gitcsS='git show --pretty=short --show-signature
+  alias gitcsS='git show --pretty=short --show-signature'
   alias gitcl='git-commit-lost'
   alias gitcy='git cherry -v --abbrev'
   alias gitcY='git cherry -v'
@@ -77,9 +77,9 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   alias gitCa='git add $(gitCl)'
   alias gitCe='git mergetool $(gitCl)'
   alias gitCo='git checkout --ours --'
-  alias gitCO='gCo $(gitCl)'
+  alias gitCO='gitCo $(gitCl)'
   alias gitCt='git checkout --theirs --'
-  alias gitCT='gCt $(gitCl)'
+  alias gitCT='gitCt $(gitCl)'
 
   # Data (d)
   alias gitd='git ls-files'
