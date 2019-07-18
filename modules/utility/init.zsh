@@ -17,6 +17,9 @@ setopt CORRECT
 # Aliases
 #
 
+# use feh for actual picture viewing
+alias show-picture='feh --auto-rotate -B black -. -YrSfilename'
+
 # Disable correction.
 alias ack='nocorrect ack'
 alias cd='nocorrect cd'
